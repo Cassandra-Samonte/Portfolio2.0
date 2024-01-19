@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'AcornBold';
+  src: url('./assets/fonts/Acorn-Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'AcornLight';
+  src: url('./assets/fonts/Acorn-Light.ttf') format('truetype');
+}
+
+:root {
+  margin: 0 auto;
+  text-align: center;
+  font-family: AcornBold;
+  font-weight: 400;
+  color: #71AD89;
+  background-color: #486856;
+}
+
+html {
+  background-color: #486856;
+}
+
+body {
+  min-height: 100vh;
+  background-color: #486856;
+  overflow: overlay;
+  overflow-x: hidden;
+}
+
+.hello {
+  font-size: 400px;
+}
+
+.name {
+  font-size: 100px;
+  line-height: .7;
+}
+
+.title {
+  font-size: 68px;
+}
+
+.tagline {
+  font-family: 'AcornLight';
+  font-size: 30px;
+  color: #E3DAC9;
+}
+
+.titlesection {
+  font-size: 350px;
+}
