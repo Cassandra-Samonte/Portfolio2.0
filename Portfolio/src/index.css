@@ -16,24 +16,19 @@
   margin: 0 auto;
   text-align: center;
   font-family: AcornBold;
-  font-weight: 400;
   color: #71AD89;
-  background-color: #486856;
-}
-
-html {
   background-color: #486856;
 }
 
 body {
   min-height: 100vh;
-  background-color: #486856;
   overflow: overlay;
   overflow-x: hidden;
 }
 
 .hello {
   font-size: 400px;
+  line-height: 1;
 }
 
 .name {
