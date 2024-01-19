@@ -49,3 +49,7 @@ body {
 .titlesection {
   font-size: 350px;
 }
+
+a, p {
+  font-family: 'AcornLight';
+}
