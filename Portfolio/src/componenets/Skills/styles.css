@@ -1,0 +1,81 @@
+.logo {
+    height: 80px;
+    padding: 5px;
+    will-change: filter;
+    transition: filter 300ms;
+  }
+  .logo.vite:hover {
+    filter: drop-shadow(0 0 2em #AE43FF);
+  }
+  .logo.react:hover {
+    filter: drop-shadow(0 0 2em #61dafbaa);
+  }
+  .logo.javascript:hover {
+    filter: drop-shadow(0 0 2em #FFE954);
+  }
+  .logo.python:hover {
+    filter: drop-shadow(0 0 2em #4E9FE4);
+  }
+  .logo.node:hover {
+    filter: drop-shadow(0 0 2em #AEF456);
+  }
+  .logo.express:hover {
+    filter: drop-shadow(0 0 2em #FFFFFF);
+  }
+  .logo.jquery:hover {
+    filter: drop-shadow(0 0 2em #389AFF);
+  }
+  .logo.postgresql:hover {
+    filter: drop-shadow(0 0 2em #95D2FF);
+  }
+  .logo.mongodb:hover {
+    filter: drop-shadow(0 0 2em #A7FF67);
+  }
+  .logo.git:hover {
+    filter: drop-shadow(0 0 2em #FF4031);
+  }
+  .logo.django:hover {
+    filter: drop-shadow(0 0 2em #6BFFB1);
+  }
+  .logo.html:hover {
+    filter: drop-shadow(0 0 2em #FF4031);
+  }
+  .logo.css:hover {
+    filter: drop-shadow(0 0 2em #44AEFF);
+  }
+  .logo.tailwind:hover {
+    filter: drop-shadow(0 0 2em #6CFFE1);
+  }
+  .logo.bootstrap:hover {
+    filter: drop-shadow(0 0 2em #8712FF);
+  }
+  .logo.cloud:hover {
+    filter: drop-shadow(0 0 2em #FF4BC7);
+  }
+  .logo.illustrator:hover {
+    filter: drop-shadow(0 0 2em #FFA401);
+  }
+  .logo.indesign:hover {
+    filter: drop-shadow(0 0 2em #FF356E);
+  }
+  .logo.premier:hover {
+    filter: drop-shadow(0 0 2em #9A9AFF);
+  }
+  .logo.photoshop:hover {
+    filter: drop-shadow(0 0 2em #43A9FF);
+  }
+  
+  @keyframes logo-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  @media (prefers-reduced-motion: no-preference) {
+    .logo.react {
+      animation: logo-spin infinite 20s linear;
+    }
+  }
