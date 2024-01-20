@@ -3,7 +3,7 @@ export default function Projects() {
     return (
         <>
             <div className="relative">
-                <h1 className="titlesection">Projects</h1>
+                <h1 className="titlesection pb-20">Projects</h1>
                 <div className="grid grid-cols-1 md:grid-cols-2 px-4 md:px-10 lg:px-20 gap-4">
                     
                     {/* World Project*/}

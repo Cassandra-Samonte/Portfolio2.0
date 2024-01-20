@@ -170,6 +170,8 @@ export default function ContactForm() {
   };
 
   return (
+    <>
+    <h1 className="titlesection">Contact Me</h1>
     <div className="envelope" onMouseOver={handleMouseOver} onMouseOut={handleMouseOut} onClick={openEnvelope}>
       <div className={`cover top ${envelopeState}`} style={{ zIndex: zIndexState.cover }}></div>
       <div className="cover bottom right" style={{ zIndex: zIndexState.cover }}></div>
@@ -195,5 +197,6 @@ export default function ContactForm() {
         </form>
       </div>
     </div>
+    </>
   );
 }

@@ -24,7 +24,7 @@ export default function Skills() {
 
   return (
     <>
-      <div className="flex justify-center items-center pt-20 pb-20 px-4 sm:px-10">
+      <div className="flex justify-center items-center pt-40 pb-20 px-4 sm:px-10">
         <div className="w-full md:w-3/4 lg:w-1/2 flex justify-center">
           <div className="grid grid-cols-4 md:grid-cols-4 lg:grid-cols-5 gap-2">
             <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">

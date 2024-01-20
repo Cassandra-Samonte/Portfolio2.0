@@ -12,19 +12,38 @@
   src: url('./assets/fonts/Acorn-Light.ttf') format('truetype');
 }
 
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+#root, .App {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  flex: 1;
+  padding-bottom: 40vh;
+}
+
 :root {
   margin: 0 auto;
   text-align: center;
   font-family: AcornBold;
   color: #88D0A5;
-  background-color: #243831;
+  background-color: #2E463F;
 }
 
 body {
-  min-height: 100vh;
   overflow: overlay;
   overflow-x: hidden;
 }
+
 
 .hello {
   font-size: 400px;
@@ -47,7 +66,7 @@ body {
 }
 
 .titlesection {
-  font-size: 350px;
+  font-size: 150px;
 }
 
 a, p {
