@@ -121,6 +121,16 @@
     border: none;
 }
 
+.email-sent-message {
+    color: #243831;
+    margin: 10px 0;
+    font-size: 12px;
+  }
+  
+.formtext {
+    color: #243831;
+}
+
 @keyframes pullLetter {
     0% {
         transform: translateY(-100px);
