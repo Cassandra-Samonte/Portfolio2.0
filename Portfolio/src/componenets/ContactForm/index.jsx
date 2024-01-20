@@ -1,62 +1,90 @@
-import './styles.css'
+import React, { useState } from 'react';
+import './styles.css';
 
-// Interactive Envelope Code from this article: https://medium.com/web-for-you/how-to-make-a-interactive-envelope-9df970614eea
+export default function ContactForm() {
+  const [envelopeState, setEnvelopeState] = useState('close');
+  const [letterAnimation, setLetterAnimation] = useState('');
+  const [formData, setFormData] = useState({
+    contactName: '',
+    contactPhoneNumber: '',
+    contactEmail: '',
+    contactMessage: ''
+  });
+  const [zIndexState, setZIndexState] = useState({
+    cover: 5,
+    letter: 3
+  });
 
-// 'use strict';
-// (function() {
-//     const envelope = document.getElementById('envelope');
-//     const envelopeTop = document.getElementById('envelopeTop');
-//     const letter = document.getElementById('contact');
-//     const left = document.getElementById('left');
-//     const bottomRight = document.getElementById('bottom-right');
-// })();
+  const handleMouseOver = () => {
+    if (letterAnimation === '') {
+      setEnvelopeState('open');
+      setZIndexState({ ...zIndexState, letter: 20 });
+    }
+  };
 
-// envelopeTop.classList.add("close");
+  const handleMouseOut = () => {
+    if (letterAnimation === '') {
+      setEnvelopeState('close');
+      setZIndexState({ ...zIndexState, letter: 3 });
+    }
+  };
 
-// envelope.addEventListener('mouseover',openEnvelopeOnHover);
-// envelope.addEventListener('mouseout',closeEnvelopeOnHover);
+  const openEnvelope = () => {
+    if (letterAnimation === '') {
+      setLetterAnimation('pull');
+      setZIndexState({ cover: 0, letter: 20 });
+      setEnvelopeState('open'); 
+    }
+  };
 
-// function openEnvelopeOnHover() {
-//     envelopeTop.classList.remove("close");
-//     envelopeTop.classList.add("open");
-//     pullOutPartial();
-// }
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    console.log('Form Data:', formData);
+    closeEnvelope();
+  };
 
-// function pullOutPartial() {
-//     letter.classList.remove("in");
-//     letter.classList.add("out-partial");
-// }
+  const handleChange = (event) => {
+    setFormData({ ...formData, [event.target.name]: event.target.value });
+  };
 
-// function closeEnvelopeOnHover() {
-//     if(flag===1) {
-//         putIn();
-//         envelopeTop.classList.remove("open");
-//         envelopeTop.classList.add("close");
-//     }
-//     else {
-//         envelope.removeEventListner('mouseout',closeEnvelopeOnHover);
-//     }
-// }
+  const closeEnvelope = () => {
+    setLetterAnimation('');
+    setEnvelopeState('close'); 
+    setZIndexState({ cover: 5, letter: 3 });
+  };
 
-// function putIn() {
-//     letter.classList.remove("out-partial");
-//     letter.classList.add("in");
-// }
+  const onPullAnimationEnd = () => {
+    if (letterAnimation === 'pull') {
+      setLetterAnimation('put');
+    } else if (letterAnimation === 'put') {
+      setLetterAnimation('final');
+    }
+  };
 
-export default function Skills() {
-
-    return (
-        <>
-            <div className="container">
-                <div className="envelope" id="envelope">
-                    <div className="cover top" id="envelopeTop"></div>
-                    <div className="cover bottom right" id="bottom-right"></div>
-                    <div className="cover left" id="left"></div>
-                    <div className="letter" id="contact"></div>
-                </div>
-            </div>
-        </>
-    )
+  return (
+    <div className="envelope" onMouseOver={handleMouseOver} onMouseOut={handleMouseOut} onClick={openEnvelope}>
+      <div className={`cover top ${envelopeState}`} style={{ zIndex: zIndexState.cover }}></div>
+      <div className="cover bottom right" style={{ zIndex: zIndexState.cover }}></div>
+      <div className="cover left" style={{ zIndex: zIndexState.cover }}></div>
+      <div
+        className={`letter ${letterAnimation}`}
+        onAnimationEnd={onPullAnimationEnd}
+        style={{ zIndex: zIndexState.letter }}
+      >
+        <h2>Let's Get in Touch!</h2>
+        <form onSubmit={handleSubmit}>
+          <p>
+            <textarea rows="1" cols="35" name="contactName" placeholder="Name..." value={formData.contactName} onChange={handleChange}></textarea>
+            <br />
+            <textarea rows="1" cols="35" name="contactPhoneNumber" placeholder="Phone..." value={formData.contactPhoneNumber} onChange={handleChange}></textarea>
+            <br />
+            <textarea rows="1" cols="35" name="contactEmail" placeholder="E-Mail..." value={formData.contactEmail} onChange={handleChange}></textarea>
+            <br />
+            <textarea rows="2" cols="35" name="contactMessage" placeholder="Message..." value={formData.contactMessage} onChange={handleChange}></textarea>
+          </p>
+          <button type="submit" className="submit-button">Submit</button>
+        </form>
+      </div>
+    </div>
+  );
 }
-
-
