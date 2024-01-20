@@ -1,31 +1,33 @@
-import reactLogo from '/public/logos/react.svg'
-import viteLogo from '/public/logos/vite.svg'
-import JavaScriptLogo from '/public/logos/JavaScript.png'
-import pythonLogo from '/public/logos/python.png'
-import nodeLogo from '/public/logos/node.png'
-import expressLogo from '/public/logos/express.png'
-import jQueryLogo from '/public/logos/jquery.png'
-import postgresqlLogo from '/public/logos/postgresql.png'
-import mongodbLogo from '/public/logos/mongodb.png'
-import gitLogo from '/public/logos/git.png'
-import djangoLogo from '/public/logos/django.png'
-import htmlLogo from '/public/logos/html.png'
-import cssLogo from '/public/logos/css.png'
-import tailwindLogo from '/public/logos/tailwind.svg'
-import bootstrapLogo from '/public/logos/bootstrap.png'
-import cloudLogo from '/public/logos/cloud.png'
-import illustratorLogo from '/public/logos/illustrator.png'
-import indesignLogo from '/public/logos/indesign.png'
-import premierLogo from '/public/logos/premier.png'
-import photoshopLogo from '/public/logos/photoshop.png'
+import reactLogo from '/logos/react.svg'
+import viteLogo from '/logos/vite.svg'
+import JavaScriptLogo from '/logos/JavaScript.png'
+import pythonLogo from '/logos/python.png'
+import nodeLogo from '/logos/node.png'
+import expressLogo from '/logos/express.png'
+import jQueryLogo from '/logos/jquery.png'
+import postgresqlLogo from '/logos/postgresql.png'
+import mongodbLogo from '/logos/mongodb.png'
+import gitLogo from '/logos/git.png'
+import djangoLogo from '/logos/django.png'
+import htmlLogo from '/logos/html.png'
+import cssLogo from '/logos/css.png'
+import tailwindLogo from '/logos/tailwind.svg'
+import bootstrapLogo from '/logos/bootstrap.png'
+import cloudLogo from '/logos/cloud.png'
+import illustratorLogo from '/logos/illustrator.png'
+import indesignLogo from '/logos/indesign.png'
+import premierLogo from '/logos/premier.png'
+import photoshopLogo from '/logos/photoshop.png'
 import './styles.css'
 
 export default function Skills() {
 
   return (
     <>
-        <div className="flex justify-center items-center pt-20 pb-20">
-            <div className="grid grid-cols-5 gap-2">
+       <div className="flex justify-center items-center pt-20 pb-20 px-4 sm:px-10">
+            <div className="w-full md:w-3/4 lg:w-1/2 flex justify-center">
+                <div className="grid grid-cols-4 md:grid-cols-4 lg:grid-cols-5 gap-2">
+
                 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
                 <img src={JavaScriptLogo} className="logo javascript" alt="JavaScript logo" />
                 </a>
@@ -88,6 +90,7 @@ export default function Skills() {
                 </a>
             </div>
         </div>
+    </div>
     </>
   )
 }
