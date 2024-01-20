@@ -6,7 +6,7 @@ export default function Projects() {
                 <h1 className="titlesection">Projects</h1>
                 <div className="grid grid-cols-1 md:grid-cols-2 px-4 md:px-10 lg:px-20 gap-4">
                     
-                    {/* Project 1 */}
+                    {/* World Project*/}
                     <div className="relative group">
                         <img src="/images/world.png" alt="Project 1" className="w-full h-auto opacity-100 group-hover:opacity-20 transition-opacity duration-300"/>
                         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 hidden group-hover:block">
@@ -42,7 +42,7 @@ export default function Projects() {
                             <a href="https://github.com/Cassandra-Samonte/Tempo" target="_blank" rel="noopener noreferrer" className="bg-gray-800 text-white px-4 py-2 rounded-full hover:bg-gray-900 transition-colors ml-2">Source Code</a>
                         </div>
                     </div>
-                    </div>
+                </div>
             </div>
         </>
     )
