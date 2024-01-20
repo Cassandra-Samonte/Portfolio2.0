@@ -6,7 +6,7 @@ export default function Home() {
                     <h1 className="hello">Hello</h1>
                     <h2 className="name">I'm Cassandra</h2>
                     <h3 className="title">A Software Engineer</h3>
-                    <h4 className="tagline">with a passion for frontend design</h4>
+                    <h4 className="tagline">with a passion for frontend development</h4>
                 </div>
             </div>
         </>
